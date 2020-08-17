@@ -13,14 +13,7 @@ public class StudentService {
 	
 	@Autowired 
 	StudentRepository studentRepository;
-
-	/*
-	 * public List<Student> getAllStudent() { studentRepository.findAll();
-	 * ArrayList<Student>stud=new ArrayList<Student>() {
-	 * 
-	 * 
-	 * } }
-	 */
+	
 	public void saveOrUpdate(Student students) {
 		studentRepository.save(students);
 	}

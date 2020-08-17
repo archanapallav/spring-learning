@@ -6,13 +6,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Student {
 	@Id 
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	@Size(min=3,message="firstName should have at least 3 characters")
 	private String firstName;
+	@Size(min=3,message="lastName should have at least 3 characters")
 	private String lastName;
 	private Date dob;
 	private int age;
